@@ -37,7 +37,8 @@ export default function App() {
 		
 	function handleSubmit(e) {
 		e.preventDefault()
-		const stringInput = userInput.charOne + userInput.charTwo + userInput.charThree + userInput.charFour 
+		// const stringInput = userInput.charOne + userInput.charTwo + userInput.charThree + userInput.charFour
+		const stringInput = Object.values(userInput).join("")
 		if (passCode == stringInput) {
 			setVerified(true)
 			console.log("password matches")
